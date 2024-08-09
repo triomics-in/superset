@@ -302,7 +302,7 @@ export function Menu({
           <Tooltip
             id="brand-tooltip"
             placement="bottomLeft"
-            title={'Welcome to Triomics'}
+            title='Welcome to Triomics'
             arrowPointAtCenter
           >
             {isFrontendRoute(window.location.pathname) ? (
@@ -311,11 +311,11 @@ export function Menu({
                 to={'/nurse/case-finding'}
                 tabIndex={-1}
               >
-                <img src={'../../assets/images/TriomicsLogoHorizon.png'} alt={'Triomics'} />
+                <img src='../../assets/images/TriomicsLogoHorizon.png' alt='Triomics' />
               </GenericLink>
             ) : (
               <a className="navbar-brand" href={brand.path} tabIndex={-1}>
-                <img src={'../../assets/images/TriomicsLogoHorizon.png'} alt={'Triomics'} />
+                <img src='../../assets/images/TriomicsLogoHorizon.png' alt='Triomics' />
               </a>
             )}
           </Tooltip>
