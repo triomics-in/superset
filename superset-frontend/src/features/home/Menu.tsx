@@ -302,26 +302,26 @@ export function Menu({
           <Tooltip
             id="brand-tooltip"
             placement="bottomLeft"
-            title={brand.tooltip}
+            title={'Welcome to Triomics'}
             arrowPointAtCenter
           >
             {isFrontendRoute(window.location.pathname) ? (
               <GenericLink
                 className="navbar-brand"
-                to={brand.path}
+                to={'/nurse/case-finding'}
                 tabIndex={-1}
               >
-                <img src={brand.icon} alt={brand.alt} />
+                <img src={'../../assets/images/TriomicsLogoHorizon.png'} alt={'Triomics'} />
               </GenericLink>
             ) : (
               <a className="navbar-brand" href={brand.path} tabIndex={-1}>
-                <img src={brand.icon} alt={brand.alt} />
+                <img src={'../../assets/images/TriomicsLogoHorizon.png'} alt={'Triomics'} />
               </a>
             )}
           </Tooltip>
           {brand.text && (
             <div className="navbar-brand-text">
-              <span>{brand.text}</span>
+              <span>Triomics</span>
             </div>
           )}
           <DropdownMenu
@@ -369,6 +369,13 @@ export function Menu({
 export default function MenuWrapper({ data, ...rest }: MenuProps) {
   const newMenuData = {
     ...data,
+    brand: {
+      path: '',
+      icon: '',
+      alt: '',
+      tooltip: '',
+      text: '',
+    }
   };
   // Menu items that should go into settings dropdown
   const settingsMenus = {
