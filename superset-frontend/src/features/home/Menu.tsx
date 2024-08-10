@@ -311,11 +311,11 @@ export function Menu({
                 to="/nurse/case-finding"
                 tabIndex={-1}
               >
-                <img src="../../assets/images/TriomicsLogoHorizon.png" alt/>
+                <img src="../../assets/images/TriomicsLogoHorizon.png" alt="" />
               </GenericLink>
             ) : (
               <a className="navbar-brand" href={brand.path} tabIndex={-1}>
-                <img src="../../assets/images/TriomicsLogoHorizon.png" alt/>
+                <img src="../../assets/images/TriomicsLogoHorizon.png" alt="" />
               </a>
             )}
           </Tooltip>
