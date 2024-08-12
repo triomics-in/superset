@@ -310,6 +310,7 @@ export function Menu({
                 className="navbar-brand"
                 to="/nurse/case-finding"
                 tabIndex={-1}
+                style={{ marginRight: '1rem' }}
               >
                 <svg
                   preserveAspectRatio="xMidYMid meet"
