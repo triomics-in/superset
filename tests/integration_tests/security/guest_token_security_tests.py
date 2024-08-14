@@ -67,7 +67,7 @@ class TestGuestUserSecurity(SupersetTestCase):
 
     @patch.dict(
         "superset.extensions.feature_flag_manager._feature_flags",
-        EMBEDDED_SUPERSET=False,
+        EMBEDDED_SUPERSET=True,
     )
     def test_is_guest_user__flag_off(self):
         is_guest = security_manager.is_guest_user(self.authorized_guest())
@@ -419,7 +419,7 @@ class TestGuestUserDatasourceAccess(SupersetTestCase):
 
     @patch.dict(
         "superset.extensions.feature_flag_manager._feature_flags",
-        EMBEDDED_SUPERSET=False,
+        EMBEDDED_SUPERSET=True,
     )
     def test_raise_for_access__embedded_feature_flag_off(self):
         g.user = self.authorized_guest

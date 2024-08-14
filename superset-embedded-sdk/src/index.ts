@@ -139,6 +139,7 @@ export async function embedDashboard({
       iframe.sandbox.add("allow-forms"); // for forms to submit
       iframe.sandbox.add("allow-popups"); // for exporting charts as csv
       iframe.sandbox.add("all-cross-origin"); // needed for postMessage to work
+      
       // additional sandbox props
       iframeSandboxExtras.forEach((key: string) => {
         iframe.sandbox.add(key);
