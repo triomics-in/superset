@@ -783,8 +783,14 @@ EXPLORE_FORM_DATA_CACHE_CONFIG: CacheConfig = {
 STORE_CACHE_KEYS_IN_METADATA_DB = False
 
 # CORS Options
-ENABLE_CORS = False
-CORS_OPTIONS: dict[Any, Any] = {}
+ENABLE_CORS = True
+CORS_OPTIONS: dict[Any, Any] = {
+    "supports_credentials": True,
+    "allow_headers": ["*"],
+    "resources": ["*"],
+    "origins": ["http://localhost:3000"], # replace the port-number 
+                                          # as per your application.
+}
 
 # Sanitizes the HTML content used in markdowns to allow its rendering in a safe manner.
 # Disabling this option is not recommended for security reasons. If you wish to allow
