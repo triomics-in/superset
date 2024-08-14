@@ -108,13 +108,15 @@ GUEST_ROLE_NAME= 'embed_dashboard'
 GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
 GUEST_TOKEN_JWT_EXP_SECONDS = 5000000
 
+ENABLE_CORS = True
 CORS_OPTIONS = {
     "supports_credentials": True,
     "allow_headers": ["*"],
     "resources": ["*"],
-    "origins": ["http://localhost:3000"], # replace the port-number 
-                                          # as per your application.
+    "origins": ["http://localhost:3000"],
 }
+
+PUBLIC_ROLE_LIKE = "Gamma"
 
 #
 # Optionally import superset_config_docker.py (which will have been included on

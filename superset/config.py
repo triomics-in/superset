@@ -251,7 +251,7 @@ SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = (  # pylint: disable=invalid-name
 QUERY_SEARCH_LIMIT = 1000
 
 # Flask-WTF flag for CSRF
-WTF_CSRF_ENABLED = False
+WTF_CSRF_ENABLED = True
 
 # Add endpoints that need to be exempt from CSRF protection
 WTF_CSRF_EXEMPT_LIST = [
@@ -788,8 +788,7 @@ CORS_OPTIONS: dict[Any, Any] = {
     "supports_credentials": True,
     "allow_headers": ["*"],
     "resources": ["*"],
-    "origins": ["http://localhost:3000"], # replace the port-number 
-                                          # as per your application.
+    "origins": ["http://localhost:3000"],
 }
 
 # Sanitizes the HTML content used in markdowns to allow its rendering in a safe manner.
